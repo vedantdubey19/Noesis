@@ -1,0 +1,277 @@
+[
+  {
+    "id": "eval_001",
+    "input": {
+      "url": "https://github.com/redis/redis/issues/482",
+      "title": "Redis vs Memcached for session storage · Issue #482",
+      "page_text": "We need to decide on a caching backend for our auth service. Team is split between Redis pub/sub and Memcached simplicity. Latency SLO is 20ms p99."
+    },
+    "expected": {
+      "observe.topic": "caching backend decision",
+      "observe.is_work_related": true,
+      "extract.content_type": "decision",
+      "extract.urgency": "high",
+      "surface.num_cards": { "min": 1, "max": 3 }
+    },
+    "notes": "Classic infra decision — expect past_decision or related_note cards"
+  },
+  {
+    "id": "eval_002",
+    "input": {
+      "url": "https://www.notion.so/Product/API-Design-2026",
+      "title": "API Design — GraphQL vs REST",
+      "page_text": "Document compares GraphQL and REST for the public API. Need to lock schema versioning and error format before Q3."
+    },
+    "expected": {
+      "observe.is_work_related": true,
+      "extract.content_type": "decision",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Notion product doc — decision framing"
+  },
+  {
+    "id": "eval_003",
+    "input": {
+      "url": "https://linear.app/team/issue/NOE-88",
+      "title": "NOE-88 Pick observability stack",
+      "page_text": "Evaluating Datadog vs Grafana Cloud for metrics and traces. Budget cap $2k/mo."
+    },
+    "expected": {
+      "extract.content_type": "decision",
+      "extract.urgency": "medium",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Vendor comparison under constraint"
+  },
+  {
+    "id": "eval_004",
+    "input": {
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html",
+      "title": "Amazon RDS storage types",
+      "page_text": "Choosing between gp3 and io2 for Postgres. Need IOPS predictability for peak payroll runs."
+    },
+    "expected": {
+      "extract.content_type": "decision",
+      "observe.is_work_related": true,
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Docs page driving a concrete storage choice"
+  },
+  {
+    "id": "eval_005",
+    "input": {
+      "url": "https://stackoverflow.com/questions/16626066/oauth-2-0-vs-openid-connect",
+      "title": "OAuth 2.0 vs OpenID Connect — what is the difference?",
+      "page_text": "I'm implementing login for a SPA. What exactly does OIDC add on top of OAuth2 for authentication?"
+    },
+    "expected": {
+      "extract.content_type": "question",
+      "extract.urgency": "medium",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Question-shaped page — open_question should be populated in extract"
+  },
+  {
+    "id": "eval_006",
+    "input": {
+      "url": "https://mail.google.com/mail/u/0/#inbox/thread/abc123",
+      "title": "Re: contract end date",
+      "page_text": "Can you confirm whether our GCP enterprise agreement auto-renews in June or we need to sign an amendment?"
+    },
+    "expected": {
+      "extract.content_type": "question",
+      "observe.is_work_related": true,
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Gmail thread — contract clarification"
+  },
+  {
+    "id": "eval_007",
+    "input": {
+      "url": "https://kubernetes.io/docs/concepts/security/pod-security-admission/",
+      "title": "Pod Security Admission",
+      "page_text": "When migrating to PSA, does baseline profile block hostPath volumes by default in 1.29?"
+    },
+    "expected": {
+      "extract.content_type": "question",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Technical specificity — good retrieval query test"
+  },
+  {
+    "id": "eval_008",
+    "input": {
+      "url": "https://news.ycombinator.com/item?id=40000000",
+      "title": "Ask HN: How do you structure on-call rotations?",
+      "page_text": "Two-person team — is a follow-the-sun handoff realistic or should we hire a third?"
+    },
+    "expected": {
+      "extract.content_type": "question",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "HN Ask — operational question"
+  },
+  {
+    "id": "eval_009",
+    "input": {
+      "url": "https://www.notion.so/Runbook/Deploy-prod-2026",
+      "title": "Deploy checklist — production",
+      "page_text": "Step 4: run migration job, verify queue depth < 100, then flip feature flag ff_dual_write. Rollback: disable flag first."
+    },
+    "expected": {
+      "extract.content_type": "task",
+      "extract.urgency": "high",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Execution checklist — task"
+  },
+  {
+    "id": "eval_010",
+    "input": {
+      "url": "https://github.com/org/service/pull/442",
+      "title": "PR #442: add idempotency keys to checkout",
+      "page_text": "Implementing Stripe idempotency keys and replay-safe handlers. Remaining: fix integration test flake."
+    },
+    "expected": {
+      "extract.content_type": "task",
+      "observe.is_work_related": true,
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "PR page — shipping work"
+  },
+  {
+    "id": "eval_011",
+    "input": {
+      "url": "https://docs.google.com/document/d/xyz/edit",
+      "title": "Q2 planning — milestones",
+      "page_text": "Today: finalize OKRs, assign owners for metrics pipeline and customer migration track."
+    },
+    "expected": {
+      "extract.content_type": "task",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Planning doc with concrete same-day tasks"
+  },
+  {
+    "id": "eval_012",
+    "input": {
+      "url": "https://jira.company.com/browse/INFRA-900",
+      "title": "INFRA-900 Rotate TLS certs",
+      "page_text": "Replace expiring certs on edge nodes. Window: Sat 02:00 UTC. Verify health checks green."
+    },
+    "expected": {
+      "extract.content_type": "task",
+      "extract.urgency": "high",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Maintenance window task"
+  },
+  {
+    "id": "eval_013",
+    "input": {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+      "title": "Cross-Origin Resource Sharing (CORS)",
+      "page_text": "Reading how browsers enforce CORS preflight for custom headers to debug a failing SPA request."
+    },
+    "expected": {
+      "extract.content_type": "reference",
+      "extract.urgency": "low",
+      "surface.num_cards": { "min": 0, "max": 1 }
+    },
+    "notes": "Low-urgency learning — stage4 should cap cards"
+  },
+  {
+    "id": "eval_014",
+    "input": {
+      "url": "https://www.postgresql.org/docs/current/sql-createindex.html",
+      "title": "PostgreSQL: CREATE INDEX",
+      "page_text": "Studying partial indexes and INCLUDE columns for a reporting query plan."
+    },
+    "expected": {
+      "extract.content_type": "reference",
+      "surface.num_cards": { "min": 0, "max": 1 }
+    },
+    "notes": "Deep documentation read"
+  },
+  {
+    "id": "eval_015",
+    "input": {
+      "url": "https://arxiv.org/abs/2401.00001",
+      "title": "Attention mechanisms survey",
+      "page_text": "Skimming sections on sparse attention for background before architecture review Monday."
+    },
+    "expected": {
+      "extract.content_type": "reference",
+      "observe.is_work_related": true,
+      "surface.num_cards": { "min": 0, "max": 1 }
+    },
+    "notes": "Research paper — reference mode"
+  },
+  {
+    "id": "eval_016",
+    "input": {
+      "url": "https://tailwindcss.com/docs/installation",
+      "title": "Tailwind installation",
+      "page_text": "Following steps to add Tailwind to Vite project for a side UI experiment."
+    },
+    "expected": {
+      "extract.content_type": "reference",
+      "surface.num_cards": { "min": 0, "max": 1 }
+    },
+    "notes": "Tutorial-style page"
+  },
+  {
+    "id": "eval_017",
+    "input": {
+      "url": "https://www.notion.so/Retros/2026-03-Sprint",
+      "title": "Sprint retro — March 2026",
+      "page_text": "Reviewing what went wrong with the rollout, action items for postmortem follow-ups, and whether we met reliability SLO."
+    },
+    "expected": {
+      "extract.content_type": "reflection",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Retro — reflection on past work"
+  },
+  {
+    "id": "eval_018",
+    "input": {
+      "url": "https://mail.google.com/mail/u/0/#sent/xyz",
+      "title": "Sent: quarterly review summary",
+      "page_text": "Re-reading my own summary of customer churn drivers and what we committed to fix next quarter."
+    },
+    "expected": {
+      "extract.content_type": "reflection",
+      "observe.is_work_related": true,
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Gmail sent — reviewing prior commitments"
+  },
+  {
+    "id": "eval_019",
+    "input": {
+      "url": "https://github.com/org/legacy-service/releases/tag/v1.0.0",
+      "title": "Release v1.0.0 — legacy service",
+      "page_text": "Comparing today's architecture notes with what we shipped in v1 to see drift and tech debt."
+    },
+    "expected": {
+      "extract.content_type": "reflection",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Release page as reflection anchor"
+  },
+  {
+    "id": "eval_020",
+    "input": {
+      "url": "https://medium.com/@user/one-year-as-em",
+      "title": "One year as an engineering manager",
+      "page_text": "Personal essay on mistakes and lessons; taking notes for my own growth plan."
+    },
+    "expected": {
+      "extract.content_type": "reflection",
+      "extract.urgency": "low",
+      "surface.num_cards": { "min": 0, "max": 3 }
+    },
+    "notes": "Non-technical reflective reading — may be work_related true if framed as career growth"
+  }
+]

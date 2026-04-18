@@ -9,7 +9,19 @@
       input { width: 100%; padding: 6px; margin-top: 4px; margin-bottom: 6px; box-sizing: border-box; }
       label { font-size: 12px; color: #555; }
       #status { margin-top: 10px; font-size: 12px; color: #333; }
-      #results { margin-top: 10px; max-height: 260px; overflow: auto; }
+      #results { margin-top: 10px; max-height: 320px; overflow: auto; }
+      .pipeline-meta { margin-bottom: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+      .activity-badge { font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 999px; }
+      .topic-pill { font-size: 10px; color: #4b5563; background: #f9fafb; padding: 2px 8px; border-radius: 6px; border: 1px solid #e5e7eb; }
+      .summary-sub { width: 100%; font-size: 11px; color: #6b7280; margin-top: 6px; line-height: 1.35; }
+      .card-type-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em; color: #6b7280; margin-bottom: 4px; }
+      .suggested-action { font-size: 11px; color: #374151; background: #f9fafb; border: 1px dashed #d1d5db; border-radius: 8px; padding: 8px; margin-top: 8px; }
+      .popup-footer { font-size: 10px; color: #9ca3af; margin-top: 10px; padding-top: 6px; border-top: 1px solid #f3f4f6; }
+      .muted { color: #6b7280; }
+      @keyframes pulse-bg { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+      .skeleton-line { height: 10px; border-radius: 4px; background: linear-gradient(90deg, #f3f4f6, #e5e7eb, #f3f4f6); background-size: 200% 100%; animation: pulse-bg 1.2s ease-in-out infinite; margin-bottom: 8px; }
+      .skeleton-line.short { width: 40%; }
+      .skeleton-card { min-height: 56px; }
       .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px; margin-bottom: 8px; }
       .card-title { font-weight: 700; font-size: 12px; margin-bottom: 4px; }
       .badge { display: inline-block; padding: 2px 6px; border-radius: 12px; font-size: 10px; color: #fff; margin-right: 6px; }

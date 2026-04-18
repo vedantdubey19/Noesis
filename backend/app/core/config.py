@@ -32,6 +32,18 @@ class Settings(BaseSettings):
     vector_weight: float = 0.7
     rrf_k: int = 60
 
+    anthropic_api_key: str = ""
+    anthropic_model: str = "claude-sonnet-4-20250514"
+    anthropic_max_tokens: int = 1024
+    pipeline_timeout_seconds: float = 8.0
+    pipeline_max_retries: int = 2
+    context_cache_ttl_seconds: int = 300
+    context_cache_max_keys: int = 1000
+    stage1_max_tokens: int = 256
+    stage2_max_tokens: int = 256
+    stage3_max_tokens: int = 512
+    stage4_max_tokens: int = 512
+
     model_config = SettingsConfigDict(env_file=str(ENV_FILE), extra="ignore")
 
     @property

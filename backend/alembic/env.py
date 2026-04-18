@@ -16,6 +16,7 @@ from app.core.config import settings
 from app.models import Base
 from app.models import chunk as _chunk  # noqa: F401
 from app.models import document as _document  # noqa: F401
+from app.models import pipeline_log as _pipeline_log  # noqa: F401
 
 
 config = context.config

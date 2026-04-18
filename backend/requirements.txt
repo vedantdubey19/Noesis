@@ -19,3 +19,5 @@ openai==1.51.0
 alembic==1.13.3
 tqdm==4.66.5
 pgvector==0.3.3
+anthropic>=0.40.0
+pytest-asyncio>=0.23.0

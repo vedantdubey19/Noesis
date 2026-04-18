@@ -29,6 +29,7 @@ class SearchResult:
     score: float
     vector_score: float
     bm25_score: float
+    relevance_score: float = 0.0
 
     def to_dict(self) -> dict:
         return asdict(self)
