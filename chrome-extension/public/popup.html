@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Noesis Sync</title>
+    <style>
+      body { font-family: sans-serif; margin: 12px; width: 280px; }
+      button { width: 100%; padding: 8px; margin-top: 8px; }
+      input { width: 100%; padding: 6px; margin-top: 4px; margin-bottom: 6px; box-sizing: border-box; }
+      label { font-size: 12px; color: #555; }
+      #status { margin-top: 10px; font-size: 12px; color: #333; }
+      #results { margin-top: 10px; max-height: 260px; overflow: auto; }
+      .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px; margin-bottom: 8px; }
+      .card-title { font-weight: 700; font-size: 12px; margin-bottom: 4px; }
+      .badge { display: inline-block; padding: 2px 6px; border-radius: 12px; font-size: 10px; color: #fff; margin-right: 6px; }
+      .badge-notion { background: #6d28d9; }
+      .badge-gmail { background: #2563eb; }
+      .score { font-size: 10px; color: #444; }
+      .strong { color: #059669; font-size: 10px; margin-left: 6px; }
+      .snippet { font-size: 11px; color: #333; margin-top: 4px; }
+    </style>
+  </head>
+  <body>
+    <h3>Noesis</h3>
+    <p>Sync this page context to backend.</p>
+    <label for="apiUrl">API URL</label>
+    <input id="apiUrl" type="text" placeholder="http://localhost:8000/api/context" />
+    <label for="apiToken">API Token</label>
+    <input id="apiToken" type="password" placeholder="Bearer token value" />
+    <label for="searchInput">Manual Search</label>
+    <input id="searchInput" type="text" placeholder="Search context..." />
+    <button id="syncBtn">Sync Current Page</button>
+    <button id="searchBtn" type="button">Search</button>
+    <button id="saveBtn" type="button">Save Settings</button>
+    <div id="status">Idle</div>
+    <div id="results"></div>
+    <script src="../src/popup.js"></script>
+  </body>
+</html>
